@@ -1,0 +1,74 @@
+{
+  "name": "csharp_build",
+  "description": "C# 编译所需的最小 SVN 工作副本。规则显式声明，ProjectX 使用稀疏检出",
+  "projects": {
+    "ProjectX": {
+      "description": "主仓库 ProjectX，按显式规则进行稀疏展开",
+      "root_path": "ProjectX",
+      "root_depth": "empty",
+	  "repo_url": "https://10.26.18.250:8443/svn/project/trunk/ProjectX",
+      "paths": [
+        {
+          "path": "Assets",
+          "depth": "empty"
+        },
+        {
+          "path": "Assets/NFCore",
+          "depth": "empty"
+        },
+        {
+          "path": "Assets/NFCore/Libraries",
+          "depth": "empty"
+        },
+        {
+          "path": "Assets/NFCore/Libraries/battle",
+          "depth": "infinity"
+        },
+        {
+          "path": "Assets/NFHotFix",
+          "depth": "empty"
+        },
+        {
+          "path": "Assets/NFHotFix/HotfixDll",
+          "depth": "infinity"
+        }
+      ]
+    },
+    "Data": {
+      "description": "Data 仓库",
+      "root_path": "Data",
+      "root_depth": "empty",
+	  "repo_url": "https://10.26.18.250:8443/svn/data/trunk",
+      "paths": [
+        {
+          "path": "Tools",
+          "depth": "empty"
+        },
+		{
+          "path": "Tools/GameEditor",
+          "depth": "empty"
+        },
+        {
+          "path": "Tools/GameEditor/bin",
+          "depth": "infinity"
+        },
+        {
+          "path": "Tools/RobotServerDll",
+          "depth": "infinity"
+        },
+        {
+          "path": "Tools/RobotServerDll_Publish",
+          "depth": "infinity"
+        },
+        {
+          "path": "Tools/SceneServerDll",
+          "depth": "infinity"
+        },
+        {
+          "path": "Tools/SceneServerDll_Publish",
+          "depth": "infinity"
+        }
+      ]
+    }
+  }
+}
